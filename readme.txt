@@ -2,7 +2,7 @@
 Contributors: jonkemp, texttheater
 Tags: nofollow, seo, google, archives, archive, pagerank, category, categories, noindex, robots, meta, login
 Requires at least: 2.6.5
-Tested up to: 3.9
+Tested up to: 4.0
 Stable tag: trunk
 
 Improves your blog's search engine optimization by "noindexing" pages you choose. Now also for page-based (as opposed to date-based) archives.
