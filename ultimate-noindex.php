@@ -36,45 +36,45 @@ add_filter( 'register', 'unn_nofollow_register' );
 function wp_noindex() {
 	if (get_option('unn_noindex_date') == "yes") {
   		if (is_date()) {
-		echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
+			echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
 		} 
 	}
 	
 	if (get_option('unn_noindex_search') == "yes") {
   		if (is_search()) {
-		echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
+			echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
 		} 
 	}
 	
 	if (get_option('unn_noindex_pages')) {
 		$pages = explode(",", get_option('unn_noindex_pages'));
 		if (is_page($pages)) {
-		echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
+			echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
 		}  
 	}
 	
 	if (get_option('unn_noindex_cat') == "yes") {
   		if (is_category()) {
-		echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
+			echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
 		} 
 	}
 	
 	if (get_option('unn_noindex_tags') == "yes") {
   		if (is_tag()) {
-		echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
+			echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
 		} 
 	}
 	
 	if (get_option('unn_noindex_auth') == "yes") {
   		if (is_author()) {
-		echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
+			echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
 		} 
 	}
 	
 	if (get_option('unn_noindex_paged') == "yes") {
 
   		if (is_paged() && !is_date() && !is_search() && !is_category() && !is_tag() && !is_author()) {
-		echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
+			echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
 		} 
 	}
 }
@@ -238,7 +238,8 @@ function unn_admin() {
                 <tr>
                 	<td colspan="2">
                     	<h3>Noindex</h3>
-                    	<p>Enter page ID's of the pages you want noindexed. Separate multiple page ID's with a comma.</p>
+                    	<p>Enter the page ID's of the pages you want noindexed. Separate multiple page ID's with a comma.</p>
+                    	<p>Enter the ID's, names or titles of the pages you want noindexed, separated by commas. Example: <code>42,about-me,Contact</code></p>
                         <textarea name="unn_noindex_pages"><?php echo $noindex_pages; ?></textarea>
                     </td>
                 </tr>
