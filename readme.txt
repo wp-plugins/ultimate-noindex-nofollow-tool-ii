@@ -15,7 +15,7 @@ Add the `noindex` robots meta tag to archives, categories, search pages, tags, a
 
 Add the `rel="nofollow"` attribute to individual pages listed by the `wp_list_pages` function or the Pages widget. Also, add the `rel="nofollow"` attribute to archive links, category links, registration and login links.
 
-Based on Jon Kemp's Ultimate Noindex Nofollow Tool.
+Written by Jon Kemp, currently maintained by Kilian Evang.
 
 == Installation ==
 
