@@ -2,11 +2,11 @@
 /*
 Plugin Name: Ultimate Noindex Nofollow Tool II
 Description: Improves your blog's search engine optimization by "noindexing" pages you choose. Now also for page-based (as opposed to date-based) archives.
-Version: 1.0
+Version: 1.1
 Author: Kilian Evang
 Author URI: http://texttheater.net
 
-Copyright 2009-2011 Jonathan Kemp and Kilian Evang
+Copyright 2009-2015 Jonathan Kemp and Kilian Evang
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
