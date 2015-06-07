@@ -36,45 +36,45 @@ add_filter( 'register', 'unn_nofollow_register' );
 function wp_noindex() {
 	if (get_option('unn_noindex_date') == "yes") {
   		if (is_date()) {
-	        echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
+		echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
 		} 
 	}
 	
 	if (get_option('unn_noindex_search') == "yes") {
   		if (is_search()) {
-	        echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
+		echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
 		} 
 	}
 	
 	if (get_option('unn_noindex_pages')) {
 		$pages = explode(",", get_option('unn_noindex_pages'));
 		if (is_page($pages)) {
-        	echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
+		echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
 		}  
 	}
 	
 	if (get_option('unn_noindex_cat') == "yes") {
   		if (is_category()) {
-	        echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
+		echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
 		} 
 	}
 	
 	if (get_option('unn_noindex_tags') == "yes") {
   		if (is_tag()) {
-	        echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
+		echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
 		} 
 	}
 	
 	if (get_option('unn_noindex_auth') == "yes") {
   		if (is_author()) {
-	        echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
+		echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
 		} 
 	}
 	
 	if (get_option('unn_noindex_paged') == "yes") {
 
-  		if (is_paged()) {
-	        echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
+  		if (is_paged() && !is_date() && !is_search() && !is_category() && !is_tag() && !is_author()) {
+		echo "	<meta name=\"robots\" content=\"noindex, follow\"/>\n";
 		} 
 	}
 }
